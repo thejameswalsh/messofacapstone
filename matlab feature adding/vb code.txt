@@ -1,0 +1,27 @@
+Function WER(words As String, ASR As String)
+Dim CharWords As String
+Dim CharASR As String
+
+Dim Werror As Integer
+Werror = 0
+
+Dim lenght As Integer
+
+Length = Len(words)
+
+If Length > Len(ASR) Then
+    Length = Len(ASR)
+End If
+
+CharWords = Mid(words, 1, 1)
+
+For i = 1 To Length
+    CharWords = Mid(words, i, 1)
+    CharASR = Mid(ASR, i, 1)
+    If (StrComp(CharWords, CharASR, vbTextCompare) <> 0) Then
+        Werror = Werror + 1
+    End If
+Next i
+
+WER = Werror
+End Function

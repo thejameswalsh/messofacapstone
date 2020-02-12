@@ -1,6 +1,6 @@
 last_number = 328;
 % last_number = 2;
-suf = 'm0001_00'
+suf = 'dB_m0001_00'
 
 %%
 speechObject = speechClient('Google','languageCode','en-US');
@@ -9,9 +9,9 @@ a = ["file name","words","ASR words","confidance","WER","Time"];
 
 for j=1:8
 snr = j * 5
-read_name = 'm0001_us_';
+
 % read_name = 'm0001_white_';
-% read_name = 'm0001_office_';
+read_name = 'm0001_office_';
 % read_name = 'm0001_street_';
 % read_name = 'm0001_restaurant_';
 
@@ -20,7 +20,6 @@ if snr < 10
 else
     no = int2str(snr);
 end
-no='';
 read_name = strcat(read_name, no, suf);
 extension = '.wav';
 

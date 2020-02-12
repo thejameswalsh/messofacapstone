@@ -36,6 +36,7 @@ end
 
 T = readcell('trans full and broken.xlsx', 'Sheet','m1');
 ref = readcell('many db testing results', 'Sheet','restaurant test');
+% ref = readcell('many db testing results', 'Sheet','baseline');
 
 'converting to WER'
 

@@ -84,3 +84,5 @@ SNR=10;
 z=awgn(samples,SNR,'measured');
 
 sound(z, fs);
+
+%%
